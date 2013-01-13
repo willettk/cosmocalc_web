@@ -1,0 +1,470 @@
+/* ----- BASIC ----- */
+	body {
+		font-family: Helvetica, sans-serif;
+		font-size: small;
+        padding: 5px;
+	}
+	#container {
+        box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+
+        background: #0399D4;
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr=#EBEBEB, endColorstr=#A1A1A1);
+        background: -webkit-gradient(linear, left top, left bottom, from(#EBEBEB), to(#A1A1A1));
+  background: -moz-linear-gradient(top,  #EBEBEB,  #A1A1A1);
+  color: #444444;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+
+		width: 470px;
+        max-height: 390px;
+        text-align:center;
+        padding: 10px;
+		
+	}
+    #innercontainer {
+		text-align: left;
+        width: 100%;
+        overflow: auto; 
+        margin: auto;       
+    }
+    #key {
+        font-size: x-small;
+        display: none;
+    }
+        
+    #output {
+        font-size: x-small;
+        overflow: auto;
+        max-height: 230px;
+        /*display: none;*/
+    }
+
+    #output table {
+        margin-top: 10px;
+    }
+    th, td {
+        font-size: x-small;
+    }
+    
+    
+    h1 {
+        text-align: center;
+        font-size: small;
+        margin-bottom: 0px;
+        margin-top:0px;
+    }
+    
+    p.dotastro {
+        font-size: x-small;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    
+    p.cite {
+        text-align: center;
+        font-size: x-small;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    
+    p.options {
+        margin: 5px;
+        width: 100%;
+        font-size: x-small;
+        text-align: center;
+    }
+    form {
+        margin: 0px;
+        text-align: center;
+    }
+    input {
+        margin: 1px;
+    }
+    .left {
+        float: left;
+        width: 210px;
+        margin: 10px 0px 0px 0px;
+    }
+    .buttons {
+        text-align: center;
+    }
+
+	a {
+		text-decoration: none;
+	}
+	a:link {
+		color: #0000CC;
+		}
+	a:visited {
+		color: #000066;	
+		}
+	a:hover {
+		color: #0000FF;
+		}	
+
+	table {
+		border-collapse: collapse;
+	}
+	table tr {
+		border-bottom: 1px solid #999;
+	}
+	table td, table th {
+		text-align: center;
+		border: 1px solid #999;
+		padding: 0.2em 0.4em;
+	}
+	.col {
+		display: inline-block;
+	}
+	.var {
+        display: block;
+        margin: 0 0.1em;
+	}
+	textarea {
+        display: inline-block;
+		width: 5em;
+		height: 4.5em;
+	}
+	ul.versions {
+		list-type: none;
+		margin: 5px 0px 0px 0px;
+		padding: 0px;
+        font-size:x-small;
+	}
+	ul.versions li {
+		display: inline-block;
+		padding: 0 0.5em;
+		border-right: 1px solid black;
+	}
+	ul.versions li:last-child {
+		border-right: 0px;
+	}
+	ul.menu {
+		list-type: none;
+		margin: 0px;
+		margin-top: 2em;
+		padding: 0px;
+        font-size: x-small;
+	}
+	ul.menu li {
+		display: inline-block;
+		padding: 0 0.5em;
+		border-right: 1px solid black;
+	}
+	ul.menu li:last-child {
+		border-right: 0px;
+	}
+
+/* ---------   Main DIV --------- */
+
+
+/*
+
+#mainpage .p_br_left {
+	text-align: left;
+	margin: 0;	
+	padding: 0px 0px 10px 10px;
+	}
+#mainpage .p_br_ctr {
+	text-align: center;
+	margin: 0;	
+	padding: 0px 0px 10px 10px;
+	}
+#mainpage .p0 {
+	text-align: left;
+	margin: 0;	
+	padding: 0px 10px 10px 10px;
+	}
+#mainpage .p1 {
+	text-align:left;
+	margin: 0;	
+	padding: 0px 10px 10px 10px;
+	}
+#mainpage .p1_ctr {
+	text-align: center;
+	margin: 0;	
+	padding: 0px 10px 10px 10px;
+	}
+#mainpage .p1_ctr_clear {
+	text-align: center;
+	margin: 0;	
+	padding: 10px 10px 10px 10px;
+	clear:both;
+	}
+#mainpage .p1_ctr_smcap {
+	text-align: center;
+	margin: 0;	
+	padding: 0px 10px 10px 10px;
+	font-variant:small-caps;
+	}
+#mainpage .p2_ctr {
+	text-align: center;
+	margin: 0;	
+	padding: 10px 10px 0px 10px;
+	}
+#mainpage .p2_ctr_right {
+	text-align: center;
+	margin: 0;	
+	padding: 10px 10px 10px 300px;
+	}
+#mainpage dl {
+	margin-top: 0px;
+	text-align: left;
+	margin-left: 10px;
+}
+#mainpage dt {
+	font-weight: bold;
+	color: #13392D;
+}
+#mainpage dd {
+	text-indent: 0px;
+}
+#mainpage em.italic {
+	font-style: italic;
+	font-weight:inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+#mainpage em.bold {
+	font-style: inherit;
+	font-weight:bold;
+	font-size: inherit;
+	color: inherit;
+}
+
+#image_left {
+	position: inherit;
+	float: left;
+	margin-right: 10px;
+}
+
+#image_right {
+	position: inherit;
+	float: right;
+	margin-left: 10px;
+}
+
+#image_center {
+	position: inherit;
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#image_150_left {
+	position: inherit;
+	width: 160px;
+	float: left;
+	clear: left;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#image_150_right {
+	position: inherit;
+	width: 160px;
+	float: right;
+	clear: right;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#image_150_center {
+	position: inherit;
+	width: 160px;
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+img.para {
+	border: 1px solid #1a391b;
+	margin: 5px 0px 5px 0px;
+	}
+img.imleft {
+	border: 2px solid #1a391b;
+	margin: 5px 10px 5px 0px;
+	}
+img.imleft_txt {
+	border: 2px solid #1a391b;
+	margin: 5px 10px 5px 0px;
+	float:left;
+	clear:left;
+	}
+img.imleft_txt_2 {
+	border: 2px solid #1a391b;
+	margin: 5px 20px 5px 0px;
+	float:left;
+	clear:left;
+	}
+img.imright {
+	border: 2px solid #1a391b;
+	margin: 5px 0px 5px 10px;
+	}
+img.imright_txt {
+	border: 2px solid #1a391b;
+	margin: 5px 0px 5px 10px;
+	float:right;
+	clear:right;
+	}
+img.imcenter {
+	border: 2px solid #1a391b;
+	margin: 5px 5px 5px 5px;
+	}
+
+img.noborder {
+	border: 0px;
+	margin: 5px 5px 5px 5px;
+	}
+img.noborder_hr {
+	display: block;
+	border: 0px;
+	margin: 10px auto 10px auto;
+	clear:both;
+	float:none;
+	
+	}
+p.imcenter {
+	text-align:center;
+	padding: 0px 0px 0px 0px;
+}
+
+.small { 
+    font-size: 90%
+    }
+.small_ctr { 
+    font-size: 90%;
+    text-align: center
+    }
+.tlink { 
+    color: white;
+    font-size: 90%
+    }
+.toplink {
+	color: #377A2F;
+	font-size: 90%
+	}
+
+.txtlink {
+	color: black;
+	font-size: 90%
+	}
+
+.formlabel {
+	color: black;
+	font-size: 90%;
+	text-align: right;
+	vertical-align: top;
+	font-style: normal
+}
+
+.formlabelleft {
+	color: black;
+	font-size: 90%;
+	text-align: left;
+	vertical-align: top;
+	font-style: normal
+}
+
+.forminfo {
+	color: black;
+	font-size: 75%;
+	text-align: left;
+	vertical-align: top;
+	font-style: italic
+}
+
+.forminfo2 {
+	color: black;
+	font-size: 75%;
+	text-align: left;
+	vertical-align: middle;
+	font-style: italic
+}
+
+.commform1 {
+	color: black;
+	font-size: 90%;
+	text-align: left;
+	vertical-align: top;
+	font-style: normal
+}
+
+
+.txt20 { border: 1px solid gray; width:20px;font-size: 12px; }
+
+.txt25 { border: 1px solid gray; width:25px;font-size: 12px; }
+.txt30 { border: 1px solid gray; width:30px;font-size: 12px; }
+.txt40 { border: 1px solid gray; width:40px;font-size: 12px; }
+.txt50 { border: 1px solid gray; width:50px;font-size: 12px; }
+.txt60 { border: 1px solid gray; width:60px;font-size: 12px; }
+.txt70 { border: 1px solid gray; width:70px;font-size: 12px; }
+.txt85 { border: 1px solid gray; width:85px;font-size: 12px; }
+.txt100 { border: 1px solid gray; width:100px;font-size: 12px; }
+.txt125 { border: 1px solid gray; width:125px;font-size: 12px; }
+.txt140 { border: 1px solid gray; width:150px;font-size: 12px; }
+.txt150 { border: 1px solid gray; width:150px;font-size: 12px; }
+.txt200 { border: 1px solid gray; width:200px;font-size: 12px; }
+.txt220 { border: 1px solid gray; width:220px;font-size: 12px; }
+.txt235 { border: 1px solid gray; width:235px;font-size: 12px; }
+.txt250 { border: 1px solid gray; width:250px;font-size: 12px; }
+.txt300 { border: 1px solid gray; width:300px;font-size: 12px; }
+.textbox100 { border: 1px solid gray; width:100px;font-size: 12px; }
+.textbox200 { border: 1px solid gray; width:200px;font-size: 12px; }
+
+
+.txtarea220  { border: 1px solid gray; width:220px; height:80px; font-size: 12px; }
+.txtarea300  { border: 1px solid gray; width:300px; height:80px; font-size: 12px; }
+.txtarea300A { border: 1px solid gray; width:300px; height:50px; font-size: 10px; }
+.txtarea350  { border: 1px solid gray; width:350px; height:80px; font-size: 12px; }
+.txtarea400  { border: 1px solid gray; width:400px; height:80px; font-size: 12px; }
+.txtarea450  { border: 1px solid gray; width:450px; height:60px; font-size: 12px; }
+
+.txtarea4050 { border: 1px solid gray; width:400px; height:50px; font-size: 12px; }
+.txtarea4950 { border: 1px solid gray; width:490px; height:50px; font-size: 12px; }
+
+
+.sze30 { border: 1px solid gray; width:30px;font-size: 11px; }
+.sze40 { border: 1px solid gray; width:40px;font-size: 11px; }
+.sze50 { border: 1px solid gray; width:50px;font-size: 11px; }
+.sze60 { border: 1px solid gray; width:60px;font-size: 11px; }
+.sze70 { border: 1px solid gray; width:70px;font-size: 11px; }
+.sze77 { border: 1px solid gray; width:77px;font-size: 11px; }
+.sze80 { border: 1px solid gray; width:80px;font-size: 11px; }
+.sze90 { border: 1px solid gray; width:90px;font-size: 11px; }
+.sze100 { border: 1px solid gray; width:100px;font-size: 11px; }
+.sze110 { border: 1px solid gray; width:110px;font-size: 11px; }
+
+.sze120 { border: 1px solid gray; width:120px;font-size: 11px; }
+.sze125 { border: 1px solid gray; width:125px;font-size: 11px; }
+.sze135 { border: 1px solid gray; width:135px;font-size: 11px; }
+.sze140 { border: 1px solid gray; width:140px;font-size: 11px; }
+.sze145 { border: 1px solid gray; width:145px;font-size: 11px; }
+.sze150 { border: 1px solid gray; width:150px;font-size: 11px; }
+.sze160 { border: 1px solid gray; width:160px;font-size: 11px; }
+.sze170 { border: 1px solid gray; width:170px;font-size: 11px; }
+.sze180 { border: 1px solid gray; width:177px;font-size: 11px; }
+.sze200 { border: 1px solid gray; width:200px;font-size: 11px; }
+.sze210 { border: 1px solid gray; width:210px;font-size: 11px; }
+.sze220 { border: 1px solid gray; width:220px;font-size: 11px; }
+.sze250 { border: 1px solid gray; width:250px;font-size: 11px; }
+.sze270 { border: 1px solid gray; width:270px;font-size: 11px; }
+.sze300 { border: 1px solid gray; width:300px;font-size: 11px; }
+.sze350 { border: 1px solid gray; width:350px;font-size: 11px; }
+.sze400 { border: 1px solid gray; width:400px;font-size: 11px; }
+.sze450 { border: 1px solid gray; width:450px;font-size: 11px; }
+.sze500 { border: 1px solid gray; width:500px;font-size: 11px; }
+.sze545 { border: 1px solid gray; width:545px;font-size: 11px; }
+
+*/
+
+
