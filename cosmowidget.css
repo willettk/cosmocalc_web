@@ -5,19 +5,19 @@
         padding: 5px;
 	}
 	#container {
-        /*box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
         -moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
         -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
 
         background: #0399D4;
         filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr=#EBEBEB, endColorstr=#A1A1A1);
         background: -webkit-gradient(linear, left top, left bottom, from(#EBEBEB), to(#A1A1A1));
-  		background: -moz-linear-gradient(top,  #EBEBEB,  #A1A1A1);
-  		color: #444444;
-  		text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
-*/
+  background: -moz-linear-gradient(top,  #EBEBEB,  #A1A1A1);
+  color: #444444;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+
 		width: 470px;
-        max-height: 690px;
+        max-height: 390px;
         text-align:center;
         padding: 10px;
 		
@@ -31,7 +31,6 @@
     #key {
         font-size: x-small;
         display: none;
-        text-align: center;
     }
         
     #output {
@@ -84,7 +83,7 @@
     }
     .left {
         float: left;
-        width: 260px;
+        width: 210px;
         margin: 10px 0px 0px 0px;
     }
     .buttons {
