@@ -1,0 +1,21 @@
+#hackaas ideas: 
+
+cosmocalc as an updated webpage (from the widget)
+ - which online versions of a cosmocalc exist?
+
+    Ned Wright's page
+    kempner.net
+    icosmos.co.uk
+
+ - what are the features that they provide?
+ - what new data can it include?
+
+astroquery updates
+ - new databases
+ - port to IDL?
+ - make nedpy work properly
+
+Zooniverse twitter - does it automatically update from all our child feeds? Who controls?
+
+Twitter - correlate hashtags/keywords as function of time. Can be done for specific group of users? Would really like party vs. hangover vs. coffee vs. hackaas vs. aas221
+
