@@ -1,0 +1,51 @@
+
+<html>
+<head>
+    <meta charset="utf-8" content="text/html; charset=utf-8">
+    <title>Ned Wright's (Updated) Javascript Cosmology Calculator</title>
+    <script language="javascript" src="jquery-1.6.min.js"></script>
+    <script language="javascript" src="cosmocalc.js"></script>
+    <link rel="stylesheet" href="cosmowidget.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div id="container">
+        <div id="innercontainer">
+            <h1>Ned Wright's (Updated) <a onclick="widget.openURL('http://www.astro.ucla.edu/~wright/CosmoCalc.html');" href="#">Cosmology Calculator</a></h1>
+            <div class="left">
+                <p class="options">Input one value each for H<sub>0</sub>, Ω<sub>M</sub>, Ω<sub>vac</sub> to apply the same cosmology to all redshifts.</p>
+                <div class="buttons">
+                    <input type="BUTTON" name="General" value="Go" onclick="doGeneral();">
+                    <input type="BUTTON" id="copy" value="results → clipboard">
+                    <input type="BUTTON" id="clear" value="clear">
+                    <!--<input type="BUTTON" name="Open" value="Open" onclick="doOpen();">
+                    <input type="BUTTON" name="Flat" value="Flat" onclick="doFlat();">-->
+                </div>
+      	      <form name="getval">
+        	        <div class="col"><span class="var">z</span><textarea name="txtz">0.1
+1
+3</textarea></div>
+    	            <div class="col"><span class="var">H<sub>0</sub></span><textarea id="txtH0" name="txtH0">50</textarea></div>
+        	        <div class="col"><span class="var">Ω<sub>M</sub></span><textarea id="txtWM" name="txtWM">0.28</textarea></div>
+            	    <div class="col"><span class="var">Ω<sub>vac</sub></span><textarea id="txtWV" name="txtWV" size="4">0.72</textarea></div>
+            	<div class="buttons">
+                	<input type="BUTTON" name="WMAP7" id="WMAP7" value="WMAP7" onclick="doReplaceHWV();">
+               		<input type="BUTTON" name="WMAP9" id="WMAP9" value="WMAP9" onclick="doReplaceHWV();">
+            	</div>
+            	</form>
+            </div>
+            <!--<p class="options"><b>General</b> uses the Ω<sub>vac</sub> that you entered.<br>
+                <b>Open</b> sets Ω<sub>vac</sub> = 0 giving an open Universe [if
+                you entered Ω<sub>M</sub> &lt; 1]<br>
+                <b>Flat</b> sets Ω<sub>vac</sub> = 1-Ω<sub>M</sub> giving
+                a flat Universe.<br>
+            </p>-->
+            <div class="output" id="output"></div>
+            <div class="key" id="key">
+                1 Gyr = 1 billion years, 1 Mpc = 1 million parsecs = <a onclick="widget.openURL('http://www.google.com/search?hl=en&amp;q=3261566+light+years+to+km');" href="#">3,261,566 light years</a>.
+            </div>
+            <p class="cite">© 1999-2012 <a onclick="widget.openURL('http://www.astro.ucla.edu/~wright/intro.html');" href="#">Edward L. Wright</a> - <b>Cite</b> <a onclick="widget.openURL('http://adsabs.harvard.edu/abs/2006PASP..118.1711W');" href="#">Wright (2006, PASP, 118, 1711)</a>. Adapted at <a onclick="widget.openURL('http://dotastronomy.com/events/four/');" href="#">.Astronomy 4</a> and <a onclick="widget.openURL('http://www.astrobetter.com/wiki/tiki-index.php?page=AASHackDay');" href="#">AAS 221 Hack Day</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
