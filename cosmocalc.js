@@ -5,6 +5,7 @@
 //
 // Adapted/modernized by Stuart Lowe @ dotAstronomy 2012, Heidelberg
 // Further adaptations by Kyle Willett & Brooke Simmons, AAS 221 Hack Day, Jan 2013
+// Code is available at https://github.com/willettk/cosmocalc_web
 
 
 // Overall object that deals with the Cosmology Calculator
@@ -513,24 +514,28 @@ $(document).ready(function(){
 
 //	}
 
-//    //store nodepath value to clipboard (copy to top of page)
-//    $('li').live('click', function(){
-//        //console.log($('#pathtonode').html()+ " copied to window");
-//        var path = $('#pathtonode').html();
-//        path = path.replace(/ &amp;gt; /g,".");
-//        //console.log(path);
-//        addtoppath(path);
-//    });
-//    //initially hide copy window
-//    $('#toppathwrap').hide();
-//
-//    function addtoppath(path) {
-//        //console.log(path);
-//        $('#output').val(path);
-//        $('#toppathwrap').show();
-//        $('#output').focus();
-//        $('#output').select();
-//    }   
+// Clipboard copying functionality from http://www.jquery4u.com/plugins/jquery-copy-clipboard-4-options/ 
+
+$(document).ready(function(){
+    //store nodepath value to clipboard (copy to top of page)
+    $('li').live('click', function(){
+        //console.log($('#pathtonode').html()+ " copied to window");
+        var path = $('#pathtonode').html();
+        path = path.replace(/ &amp;gt; /g,".");
+        //console.log(path);
+        addtoppath(path);
+    });
+    //initially hide copy window
+    $('#toppathwrap').hide();
+
+    function addtoppath(path) {
+        //console.log(path);
+        $('#copypath').val(path);
+        $('#toppathwrap').show();
+        $('#copypath').focus();
+        $('#copypath').select();
+    }   
+});
 
     $('#copy').hide();
     $('#clear').hide();

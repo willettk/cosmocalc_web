@@ -5,7 +5,7 @@
     <title>Ned Wright's (Updated) Javascript Cosmology Calculator</title>
     <script language="javascript" src="jquery-1.6.min.js"></script>
     <script language="javascript" src="cosmocalc.js"></script>
-    <link rel="stylesheet" href="cosmowidget.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="cosmowidget.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
                 <p class="options">Input one value each for H<sub>0</sub>, Ω<sub>M</sub>, Ω<sub>vac</sub> to apply the same cosmology to all redshifts.</p>
                 <div class="buttons">
                     <input type="BUTTON" name="General" value="Go" onclick="doGeneral();">
-                    <input type="BUTTON" id="copy" value="results → clipboard">
+                    <!-- <input type="BUTTON" id="copy" value="results → clipboard"> -->
                     <input type="BUTTON" id="clear" value="clear">
                     <!--<input type="BUTTON" name="Open" value="Open" onclick="doOpen();">
                     <input type="BUTTON" name="Flat" value="Flat" onclick="doFlat();">-->
@@ -40,10 +40,6 @@
                     <option value="WMAP9" selected="selected">WMAP9</option>
                     <option value="WMAP9+">WMAP9 + eCMB + BAO + H0</option>
                   </select>
-                  <!--
-                    <input type="BUTTON" name="WMAP7" id="WMAP7" value="WMAP7" onclick="doWMAP7();">
-                    <input type="BUTTON" name="WMAP9" id="WMAP9" value="WMAP9" onclick="doWMAP9();">
-                    -->
                 </div>
             </div>
             </form>

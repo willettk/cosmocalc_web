@@ -77,7 +77,9 @@ body {
     -khtml-margin-top-collapse: separate;
     -khtml-margin-bottom-collapse: separate;
     position: relative;
-/*  background-color: rgb(221, 221, 221);
+/*  Removed background from widget for web application
+
+    background-color: rgb(221, 221, 221);
     border-radius: 13px;
 */
     opacity: 1;
